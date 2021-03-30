@@ -1,0 +1,69 @@
+<div class="container">
+    <form #registrarClienteForm="ngForm" (ngSubmit)="Registrar()">
+        <div class="row justify-content-end ">
+            <div id="cotizar"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center mt-3">
+                <h2>SOLICITE SU COTIZACION</h2>
+            </div>
+
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="form-group col-lg-3 col-md-10 col-sm-10 mt-3 ">
+                <label for="nombre">Nombres</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombres" name="Nombres"
+                    #Nombres="ngModel" [(ngModel)]="clientes.nombres">
+            </div>
+            <div class="form-group col-lg-3 col-md-10 col-sm-10 mt-3 ">
+                <label for="nombre">Apellidos</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Apellidos" name="Apellidos"
+                    #Apellidos="ngModel" [(ngModel)]="clientes.apellidos">
+            </div>
+            <div class="form-group col-lg-3 col-md-10 col-sm-10 mt-3">
+                <label for="mail">Correo Electronico</label>
+                <input type="email" class="form-control" id="mail" placeholder="ejemplo@" name="Mail" #Mail="ngModel"
+                    [(ngModel)]="clientes.correo">
+            </div>
+            <div class="form-group col-lg-3 col-md-10 col-sm-10 mt-3 ">
+                <label for="mail">Telefono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="3101234567" name="Telefono"
+                    #Telefono="ngModel" [(ngModel)]="clientes.telefono">
+            </div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="form-group col-lg-4 col-md-5 col-sm-10 mt-3">
+                <label for="origen">Ciudad de Origen</label>
+                <input type="text" class="form-control" id="origen" placeholder="Bogotá" name="Origen" #Origen="ngModel"
+                    [(ngModel)]="clientes.ciudad_origen">
+            </div>
+            <div class="form-group col-lg-4 col-md-5 col-sm-10 mt-3">
+                <label for="destino">Ciudad de Destino</label>
+                <input type="text" class="form-control" id="destino" placeholder="La mesa - Cundinamarca" name="Destino"
+                    #Destino="ngModel" [(ngModel)]="clientes.ciudad_destino">
+            </div>
+        </div>
+        <div class="row justify-content-evenly ">
+
+            <div class="form-group col-lg-2 col-md-3 col-sm-10 mt-3  ">
+                <label for="salida">Fecha de Salida</label>
+                <input type="date" class="form-control" id="salida" placeholder="27/01/2020" name="Salida"
+                    #Salida="ngModel" [(ngModel)]="clientes.fecha_inicio">
+            </div>
+            <div class="form-group col-lg-2 col-md-3 mt-3 col-sm-10 ">
+                <label for="regreso">Fecha de Regreso</label>
+                <input type="date" class="form-control" id="regreso" placeholder="1/02/2020" name="Regreso"
+                    #Regreso="ngModel" [(ngModel)]="clientes.fecha_fin">
+            </div>
+            <div class="form-group col-lg-2 col-md-3    mt-3 col-sm-10 ">
+                <label for="cantidad"> Numero de Personas</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="10" name="Cantidad"
+                    #Cantidad="ngModel" [(ngModel)]="clientes.cantidad_pasajeros">
+            </div>
+        </div>
+
+        <div class="row justify-content-center ">
+            <div class="form-group col-lg-2 col-md-2 col-sm-2 mt-3 mx-auto ">
+                <button type="submit" class="btn btn-primary mb-3">Solicitar</button>
+            </div>
+        </div>
+    </form>
+</div>
